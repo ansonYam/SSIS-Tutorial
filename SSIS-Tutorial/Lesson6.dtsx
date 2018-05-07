@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="4/29/2018 2:28:24 AM"
+  DTS:CreationDate="5/4/2018 6:38:20 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="LAPTOP-RSO49BQP"
   DTS:CreatorName="LAPTOP-RSO49BQP\Anson Yam"
-  DTS:DTSID="{3FC5A815-865C-4D43-8D72-79A1BFCB6A2D}"
+  DTS:DTSID="{A4659CA3-BE4C-4E17-985A-6EE99F84B6BF}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="14.0.3002.101"
   DTS:LocaleID="4105"
-  DTS:ObjectName="Lesson4"
+  DTS:ObjectName="Lesson6"
   DTS:PackageType="5"
-  DTS:VersionBuild="34"
-  DTS:VersionGUID="{FD3B7D62-3E0E-44F8-A913-24E5E55F2CEC}">
+  DTS:VersionBuild="49"
+  DTS:VersionGUID="{95E96EAA-1202-49F2-AB47-4307BEA2E53E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Error Data]"
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{C2F6636B-CEDF-4F80-A965-543AF49E1685}"
-      DTS:ObjectName="Error Data">
+      DTS:DTSID="{401EB709-90B2-4017-B519-84C669CF6209}"
+      DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -29,7 +29,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="ErrorOutput.txt">
+          DTS:ConnectionString="C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA\Sample Data\ErrorOutput.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -37,16 +37,16 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="AverageRate"
-              DTS:DTSID="{133F96E2-8B70-4AF1-BD7A-C200E2F11DB9}"
+              DTS:DTSID="{675DF466-D7C0-424F-9A02-4B62183EF520}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="3"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CurrencyID"
-              DTS:DTSID="{16F07487-4E05-4EB9-9FDF-CD0FC246A278}"
+              DTS:DTSID="{67BEE128-A162-4B10-B7E6-AFB049EB46DF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -54,7 +54,7 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="CurrencyDate"
-              DTS:DTSID="{0477314F-3BE6-4B8A-8649-8191C3AAA071}"
+              DTS:DTSID="{89D1335D-F9CA-40E1-A6C8-FF8AA1D57E52}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -62,7 +62,15 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="EndOfDayRate"
-              DTS:DTSID="{A9354170-DDC7-4432-8D9C-8090A2E35340}"
+              DTS:DTSID="{E6C82D4C-7F43-45C9-BF82-3352023C09C6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="CurrencyKey"
+              DTS:DTSID="{6ADADE66-52FE-4CD9-916C-618EF048082B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -70,7 +78,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorCode"
-              DTS:DTSID="{1BBDA90D-FBBB-43CB-8E62-54CC167226D2}"
+              DTS:DTSID="{1B0361C1-85A6-4120-B75F-13EAA0AE8F30}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -78,7 +86,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorColumn"
-              DTS:DTSID="{B5F8AC55-C66C-46E2-9A3C-1E2C69F6F882}"
+              DTS:DTSID="{C769F288-1BBD-4012-8A36-5C16C6AA0200}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -87,17 +95,17 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="ErrorDescription"
-              DTS:DTSID="{B6D64CC5-5B82-4685-AA79-956C3D683C65}"
+              DTS:DTSID="{AB4CD8D8-1C95-4851-81E1-A8E73F7D1746}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LAPTOP-RSO49BQP.AdventureWorksDW2012]"
+      DTS:refId="Package.ConnectionManagers[LAPTOP-RSO49BQP/SQLEXPRESS.AdventureWorksDW2012]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{CD0C10B4-2709-4B40-A0D3-E7DB892B98EC}"
-      DTS:ObjectName="LAPTOP-RSO49BQP.AdventureWorksDW2012">
+      DTS:DTSID="{CE109151-7F5C-4E35-BB5E-201428658323}"
+      DTS:ObjectName="LAPTOP-RSO49BQP/SQLEXPRESS.AdventureWorksDW2012">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectionString="Data Source=LAPTOP-RSO49BQP\SQLEXPRESS;Initial Catalog=AdventureWorksDW2012;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
@@ -106,10 +114,10 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[Sample Flat File Source Data]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{71EA64A5-04A6-4B22-80EF-0B4BD3486261}"
+      DTS:DTSID="{B82E819D-FBDF-41F1-8C2C-F45354BB279C}"
       DTS:ObjectName="Sample Flat File Source Data">
       <DTS:PropertyExpression
-        DTS:Name="ConnectionString">@[User::varFileName]</DTS:PropertyExpression>
+        DTS:Name="Description">@[User::varFileName]</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -117,7 +125,8 @@
           DTS:HeaderRowDelimiter="_x000D__x000A_"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
-          DTS:CodePage="1252">
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA\Sample Data\SampleCurrencyData.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -125,16 +134,16 @@
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="AverageRate"
-              DTS:DTSID="{BA24BF07-FEC9-4576-B417-50FC1ED3B5E3}"
+              DTS:DTSID="{09CB3A21-5405-4F27-BD38-71295433785B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x0009_"
-              DTS:MaximumWidth="50"
+              DTS:MaximumWidth="3"
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="CurrencyID"
-              DTS:DTSID="{B1FA97B2-1E75-426C-AB3A-4B202816D1AB}"
+              DTS:DTSID="{EE949C02-A8D9-4D61-86D5-A2A8E831DB07}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -142,15 +151,15 @@
               DTS:DataType="133"
               DTS:TextQualified="True"
               DTS:ObjectName="CurrencyDate"
-              DTS:DTSID="{1EABDEE3-17B7-47BD-856F-2263ED195999}"
+              DTS:DTSID="{D598711F-D304-42E1-B087-CB1992B7B47E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x000A_"
+              DTS:ColumnDelimiter="_x000D__x000A_"
               DTS:DataType="4"
               DTS:TextQualified="True"
               DTS:ObjectName="EndOfDayRate"
-              DTS:DTSID="{3C35B174-57F4-47A6-B47B-E9688A69EE9B}"
+              DTS:DTSID="{8E1B1618-679A-4D27-92C3-74CF29603C21}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -159,12 +168,12 @@
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[TutorialLog.log]"
       DTS:CreationName="FILE"
-      DTS:DTSID="{195A95C5-E14D-4B49-AD72-CC185DD64A9E}"
+      DTS:DTSID="{DF612FF7-6826-41F9-BD7C-4DED242560DD}"
       DTS:ObjectName="TutorialLog.log">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:FileUsageType="1"
-          DTS:ConnectionString="TutorialLog.log" />
+          DTS:ConnectionString="C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA\Sample Data\TutorialLog.log" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -172,24 +181,46 @@
     <DTS:LogProvider
       DTS:ConfigString="TutorialLog.log"
       DTS:CreationName="Microsoft.LogProviderTextFile"
-      DTS:Description="Writes log entries for events to a CSV file"
-      DTS:DTSID="{D249DF49-968A-4FD2-9C70-1185CA87AC40}"
+      DTS:Description="Writes log entries for Lesson 3 to a CSV file"
+      DTS:DTSID="{03E33574-7CE7-4AE9-A72B-67C5B5A096B8}"
       DTS:ObjectName="Lesson 3 Log File">
       <DTS:ObjectData>
         <InnerObject />
       </DTS:ObjectData>
     </DTS:LogProvider>
   </DTS:LogProviders>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{BAD2A5F6-9E0C-4B7E-8BB1-5F0338226297}"
+      DTS:ObjectName="VarFolderName">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">C:\New Sample Data</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
   <DTS:Variables>
     <DTS:Variable
       DTS:CreationName=""
-      DTS:DTSID="{74D62B1A-AF73-4F72-A324-E6801B910519}"
+      DTS:DTSID="{E4A0B9B0-9D15-4F95-AE82-7CAA1BAD4861}"
       DTS:IncludeInDebugDump="2345"
       DTS:Namespace="User"
       DTS:ObjectName="varFileName">
       <DTS:VariableValue
         DTS:DataType="8"
         xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{F3465C68-FA8D-465C-8FD6-92B711D46D57}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[$Package::VarFolderName]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="varFolderName">
+      <DTS:VariableValue
+        DTS:DataType="8">C:\New Sample Data</DTS:VariableValue>
     </DTS:Variable>
   </DTS:Variables>
   <DTS:LoggingOptions
@@ -200,18 +231,20 @@
       DTS:refId="Package\Foreach File in Folder"
       DTS:CreationName="STOCK:FOREACHLOOP"
       DTS:Description="Foreach Loop Container"
-      DTS:DTSID="{86ADFA2C-7293-40C7-86C3-44F148A0DFD0}"
+      DTS:DTSID="{43138D3F-FA2C-4E9E-A8EA-99016678631C}"
       DTS:ExecutableType="STOCK:FOREACHLOOP"
       DTS:LocaleID="-1"
       DTS:ObjectName="Foreach File in Folder">
       <DTS:ForEachEnumerator
         DTS:CreationName="Microsoft.ForEachFileEnumerator"
-        DTS:DTSID="{3E1E65D2-05D9-44D3-A5A6-405DAED4E19E}"
-        DTS:ObjectName="{3E1E65D2-05D9-44D3-A5A6-405DAED4E19E}">
+        DTS:DTSID="{CA49B413-8B79-40A1-9788-F3D09290AFFD}"
+        DTS:ObjectName="{CA49B413-8B79-40A1-9788-F3D09290AFFD}">
+        <DTS:PropertyExpression
+          DTS:Name="Directory">@[User::varFolderName]</DTS:PropertyExpression>
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA\Currency-text-files" />
+              Folder="C:\New Sample Data" />
             <FEFEProperty
               FileSpec="Currency_*.txt" />
             <FEFEProperty
@@ -230,7 +263,7 @@
           DTS:refId="Package\Foreach File in Folder\Extract Sample Currency Data"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:DTSID="{967D8AE2-3E29-42E3-A943-D48B8A1AD6CB}"
+          DTS:DTSID="{1643EA8A-F04C-4013-8510-30C58A8B8FF0}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
           DTS:ObjectName="Extract Sample Currency Data"
@@ -280,7 +313,7 @@
             </DTS:Property>
             <DTS:SelectedLogProviders>
               <DTS:SelectedLogProvider
-                DTS:InstanceID="{D249DF49-968A-4FD2-9C70-1185CA87AC40}" />
+                DTS:InstanceID="{03E33574-7CE7-4AE9-A72B-67C5B5A096B8}" />
             </DTS:SelectedLogProviders>
           </DTS:LoggingOptions>
           <DTS:ObjectData>
@@ -344,7 +377,7 @@
                           errorOrTruncationOperation="Conversion"
                           errorRowDisposition="FailComponent"
                           externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Flat File Source Output].ExternalColumns[CurrencyID]"
-                          length="50"
+                          length="3"
                           lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Flat File Source Output].Columns[CurrencyID]"
                           name="CurrencyID"
                           truncationRowDisposition="FailComponent">
@@ -409,7 +442,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach File in Folder\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Flat File Source Output].ExternalColumns[CurrencyID]"
                           dataType="wstr"
-                          length="50"
+                          length="3"
                           name="CurrencyID" />
                         <externalMetadataColumn
                           refId="Package\Foreach File in Folder\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Flat File Source Output].ExternalColumns[CurrencyDate]"
@@ -461,7 +494,7 @@
                     <property
                       dataType="System.Boolean"
                       description="Specifies whether the data will overwrite or append to the destination file."
-                      name="Overwrite">false</property>
+                      name="Overwrite">true</property>
                     <property
                       dataType="System.Null"
                       description="Specifies the text to write to the destination file before any data is written."
@@ -471,8 +504,8 @@
                   <connections>
                     <connection
                       refId="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows.Connections[FlatFileConnection]"
-                      connectionManagerID="Package.ConnectionManagers[Error Data]"
-                      connectionManagerRefId="Package.ConnectionManagers[Error Data]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
                       name="FlatFileConnection" />
                   </connections>
                   <inputs>
@@ -490,7 +523,7 @@
                         <inputColumn
                           refId="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows.Inputs[Flat File Destination Input].Columns[CurrencyID]"
                           cachedDataType="wstr"
-                          cachedLength="50"
+                          cachedLength="3"
                           cachedName="CurrencyID"
                           externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows.Inputs[Flat File Destination Input].ExternalColumns[CurrencyID]"
                           lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Flat File Source Output].Columns[CurrencyID]" />
@@ -507,17 +540,23 @@
                           externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows.Inputs[Flat File Destination Input].ExternalColumns[EndOfDayRate]"
                           lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Flat File Source Output].Columns[EndOfDayRate]" />
                         <inputColumn
+                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows.Inputs[Flat File Destination Input].Columns[CurrencyKey]"
+                          cachedDataType="i4"
+                          cachedName="CurrencyKey"
+                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows.Inputs[Flat File Destination Input].ExternalColumns[CurrencyKey]"
+                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Match Output].Columns[CurrencyKey]" />
+                        <inputColumn
                           refId="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows.Inputs[Flat File Destination Input].Columns[ErrorCode]"
                           cachedDataType="i4"
                           cachedName="ErrorCode"
                           externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output].Columns[ErrorCode]" />
+                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Error Output].Columns[ErrorCode]" />
                         <inputColumn
                           refId="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
                           cachedDataType="i4"
                           cachedName="ErrorColumn"
                           externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output].Columns[ErrorColumn]" />
+                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Error Output].Columns[ErrorColumn]" />
                         <inputColumn
                           refId="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows.Inputs[Flat File Destination Input].Columns[ErrorDescription]"
                           cachedDataType="wstr"
@@ -535,7 +574,7 @@
                         <externalMetadataColumn
                           refId="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows.Inputs[Flat File Destination Input].ExternalColumns[CurrencyID]"
                           dataType="wstr"
-                          length="50"
+                          length="3"
                           name="CurrencyID" />
                         <externalMetadataColumn
                           refId="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows.Inputs[Flat File Destination Input].ExternalColumns[CurrencyDate]"
@@ -545,6 +584,10 @@
                           refId="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows.Inputs[Flat File Destination Input].ExternalColumns[EndOfDayRate]"
                           dataType="r4"
                           name="EndOfDayRate" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows.Inputs[Flat File Destination Input].ExternalColumns[CurrencyKey]"
+                          dataType="i4"
+                          name="CurrencyKey" />
                         <externalMetadataColumn
                           refId="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
                           dataType="i4"
@@ -578,78 +621,6 @@
                       state="cdata">
                       <arrayElements
                         arrayElementCount="30">
-                        <arrayElement
-                          dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
-*  Microsoft SQL Server Integration Services component wrapper
-*  This module defines the base class for your component
-*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
-
-using System;
-using System.Data;
-using Microsoft.SqlServer.Dts.Pipeline;
-using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
-using Microsoft.SqlServer.Dts.Runtime.Wrapper;
-
-public class UserComponent: ScriptComponent
-{
-    public Connections Connections;
-    public Variables Variables;
-    public UserComponent()
-    {
-        Connections = new Connections(this);
-        Variables = new Variables(this);
-    }
-
-    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
-    {
-
-        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
-        {
-            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
-        }
-
-    }
-
-    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
-    {
-        while (Buffer.NextRow())
-        {
-            Input0_ProcessInputRow(Buffer);
-        }
-    }
-
-    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
-    {
-    }
-
-}
-
-public class Connections
-{
-    ScriptComponent ParentComponent;
-
-    public Connections(ScriptComponent Component)
-    {
-        ParentComponent = Component;
-    }
-
-}
-
-public class Variables
-{
-    ScriptComponent ParentComponent;
-
-    public Variables(ScriptComponent Component)
-    {
-        ParentComponent = Component;
-    }
-
-}
-]]></arrayElement>
                         <arrayElement
                           dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
                         <arrayElement
@@ -899,132 +870,6 @@ public class ScriptMain : UserComponent
 }
 ]]></arrayElement>
                         <arrayElement
-                          dataType="System.String"><![CDATA[SC_8b285486b05c42d194f1292bb0ebe3d3.csproj]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{30A15A24-E856-4271-A620-73A26CF20C3E}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SC_8b285486b05c42d194f1292bb0ebe3d3</RootNamespace>
-    <AssemblyName>SC_8b285486b05c42d194f1292bb0ebe3d3</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
-    <TargetFrameworkProfile>
-    </TargetFrameworkProfile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>.\bin\Debug\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DebugSymbols>false</DebugSymbols>
-    <Optimize>true</Optimize>
-    <OutputPath>.\bin\Release\</OutputPath>
-    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.SqlServer.TxScript, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Compile Include="main.cs" />
-    <Compile Include="BufferWrapper.cs" />
-    <Compile Include="ComponentWrapper.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <AppDesigner Include="Properties\" />
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-  </ItemGroup>
-  <!-- Include the build rules for a C# project.-->
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
-  <ProjectExtensions>
-    <VisualStudio>
-      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
-        <ProjectProperties HostName="VSTAHostName" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" />
-        <Host Name="ScriptComponent" IconIndex="0" />
-        <ProjectClient>
-          <HostIdentifier>SSIS_SC140</HostIdentifier>
-        </ProjectClient>
-      </FlavorProperties>
-    </VisualStudio>
-  </ProjectExtensions>
-</Project>]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
-                        <arrayElement
-                          dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
-// <auto-generated>
-//     This code was generated by a tool.
-//
-//     Changes to this file may cause incorrect behavior and will be lost if
-//     the code is regenerated.
-// </auto-generated>
-//------------------------------------------------------------------------------
-
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_8b285486b05c42d194f1292bb0ebe3d3.Properties.Settings.get_Default():SC_8b285486b05c42d194f1292bb0ebe3d3.Properties.Sett" +
-    "ings")]
-
-namespace SC_8b285486b05c42d194f1292bb0ebe3d3.Properties {
-    
-    
-    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
-        
-        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-        private static Settings defaultInstance = new Settings();
-        
-        public static Settings Default {
-            get {
-                return defaultInstance;
-            }
-        }
-    }
-}
-]]></arrayElement>
-                        <arrayElement
                           dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
                         <arrayElement
                           dataType="System.String"><![CDATA[UTF8]]></arrayElement>
@@ -1099,6 +944,203 @@ public class Input0Buffer: ScriptBuffer
 }
 ]]></arrayElement>
                         <arrayElement
+                          dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[SC_14912343a50e45aa83e51caae5a3bd0e.csproj]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{708def79-5b7c-4953-a877-c178fd3558aa}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_14912343a50e45aa83e51caae5a3bd0e</RootNamespace>
+    <AssemblyName>SC_14912343a50e45aa83e51caae5a3bd0e</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptComponent" GeneratedNamespace="SC_14912343a50e45aa83e51caae5a3bd0e" IconIndex="0"></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC140</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                        <arrayElement
+                          dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_14912343a50e45aa83e51caae5a3bd0e.Properties.Settings.get_Default():SC_14912343a50e45aa83e51caae5a3bd0e.Properties.Sett" +
+    "ings")]
+
+namespace SC_14912343a50e45aa83e51caae5a3bd0e.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                        <arrayElement
                           dataType="System.String"><![CDATA[Project]]></arrayElement>
                         <arrayElement
                           dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
@@ -1106,17 +1148,17 @@ public class Input0Buffer: ScriptBuffer
                           dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
 <c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
   <msb:PropertyGroup>
-    <msb:CodeName>SC_8b285486b05c42d194f1292bb0ebe3d3</msb:CodeName>
+    <msb:CodeName>SC_14912343a50e45aa83e51caae5a3bd0e</msb:CodeName>
     <msb:Language>msBuild</msb:Language>
-    <msb:DisplayName>SC_8b285486b05c42d194f1292bb0ebe3d3</msb:DisplayName>
-    <msb:ProjectId>{AAA715DE-5026-4302-AF83-45AD3474C0B7}</msb:ProjectId>
+    <msb:DisplayName>SC_14912343a50e45aa83e51caae5a3bd0e</msb:DisplayName>
+    <msb:ProjectId>{347220EA-8125-4622-BD24-268B9F24E5D1}</msb:ProjectId>
   </msb:PropertyGroup>
   <msb:ItemGroup>
-    <msb:Project Include="SC_8b285486b05c42d194f1292bb0ebe3d3.csproj" />
+    <msb:Project Include="SC_14912343a50e45aa83e51caae5a3bd0e.csproj" />
+    <msb:File Include="ComponentWrapper.cs" />
     <msb:File Include="Properties\Settings.Designer.cs" />
     <msb:File Include="main.cs" />
     <msb:File Include="BufferWrapper.cs" />
-    <msb:File Include="ComponentWrapper.cs" />
     <msb:File Include="Properties\Settings.settings" />
     <msb:File Include="Properties\AssemblyInfo.cs" />
     <msb:File Include="Properties\Resources.resx" />
@@ -1136,11 +1178,11 @@ using System.Runtime.CompilerServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly: AssemblyTitle("SC_8b285486b05c42d194f1292bb0ebe3d3")]
+[assembly: AssemblyTitle("SC_14912343a50e45aa83e51caae5a3bd0e")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("SC_8b285486b05c42d194f1292bb0ebe3d3")]
+[assembly: AssemblyProduct("SC_14912343a50e45aa83e51caae5a3bd0e")]
 [assembly: AssemblyCopyright("Copyright @  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -1183,14 +1225,14 @@ using System.Runtime.CompilerServices;
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_8b285486b05c42d194f1292bb0ebe3d3.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_14912343a50e45aa83e51caae5a3bd0e.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
     "rceManager")]
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_8b285486b05c42d194f1292bb0ebe3d3.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_14912343a50e45aa83e51caae5a3bd0e.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
     "fo")]
-[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_8b285486b05c42d194f1292bb0ebe3d3.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_14912343a50e45aa83e51caae5a3bd0e.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
     "):Void")]
 
-namespace SC_8b285486b05c42d194f1292bb0ebe3d3.Properties {
+namespace SC_14912343a50e45aa83e51caae5a3bd0e.Properties {
     
     
     /// <summary>
@@ -1218,7 +1260,7 @@ namespace SC_8b285486b05c42d194f1292bb0ebe3d3.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if ((resourceMan == null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_8b285486b05c42d194f1292bb0ebe3d3.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_14912343a50e45aa83e51caae5a3bd0e.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -1252,11 +1294,11 @@ namespace SC_8b285486b05c42d194f1292bb0ebe3d3.Properties {
                       <arrayElements
                         arrayElementCount="2">
                         <arrayElement
-                          dataType="System.String"><![CDATA[SC_8b285486b05c42d194f1292bb0ebe3d3.dll]]></arrayElement>
+                          dataType="System.String"><![CDATA[SC_14912343a50e45aa83e51caae5a3bd0e.dll]]></arrayElement>
                         <arrayElement
                           dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
-ZGUuDQ0KJAAAAAAAAABQRQAATAEDAPG75VoAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAdjIA
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDACfR8FoAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAdjIA
 AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
 ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAACQyAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
 AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1277,7 +1319,7 @@ ACAAAAAIAAAABwAAABgAAAAPAAAAJQAAABAAAAADAAAABwAAAAgAAAABAAAABQAAAAEAAAAAADAD
 AQAAAAAABgAqAhYFBgC+AhYFBgB2AQMFDwCKBQAABgCjAeIDBgANAuIDBgDuAeIDBgClAuIDBgBK
 AuIDBgBjAuIDBgC6AeIDBgDVAfkCCgB+AsMACgCsBMMADgCdBMMACgBUBMMACgBQBsMABgATBpoD
 BgBZAQMFBgC9BDYFBgBIBM0DEgApARoDEgCKARoDEgARAbgDBgA+ARYFFgABAM0EBgD0A5oDBgAT
-A5oDBgA3BJoDBgDkAJoDBgCVAJoDBgDVBuIDAAAAAEcAAAAAAAEAAQABABAArQMAABAAAQABAAEA
+A5oDBgA3BJoDBgDkAJoDBgCVAJoDBgDVBuIDAAAAACMAAAAAAAEAAQABABAArQMAABAAAQABAAEA
 EACQBAAAOQABAAUAAQAQADIGAABFAAEADAABABAABwYAAEkAAwAQAAEAEADIBQAASQAEABEAAAAQ
 AD0FmQVJAAUAEgAAARAA9wWZBWEABwAWAAYABwZ/AAYAyAWDAAEAQAaHAAEAQAaHABEAoQOLABEA
 AQGPABEAdwCTAFAgAAAAAMYA3AIGAAEAWCAAAAAAxgDnAgYAAQBgIAAAAADGALIGlwABAHkgAAAA
@@ -1286,20 +1328,20 @@ hggOBBAABQC0IAAAAACGCG0DoQAGAMsgAAAAAIYAyQZHAAcA0yAAAAAAhgAaBkcABwDbIAAAAACG
 GPYEBgAHAPsgAAAAAMYApQamAAcAICEAAAAAxgGeBpcACwAzIQAAAADGAbIGlwAMADUhAAAAAIYY
 9gSwAA0ARCEAAAAAhhj2BLAADgBTIQAAAACDGPYEBgAPAFshAAAAAJMIuQS2AA8AhyEAAAAAkwjp
 ALsADwCOIQAAAACTCPUAwAAPAJYhAAAAAJYIJgbGABAAnSEAAAAAhhj2BAYAEAClIQAAAACRGPwE
-ywAQAAAAAQDNBgAAAQCyBAAAAgDSBQAAAwBiBAAAAQDzAgAAAQDzAgAAAQBQAAAAAgC5AAAAAwCy
+ywAQAAAAAQDNBgAAAQCyBAAAAgDSBQAAAwBiBAAAAQDzAgAAAQDzAgAAAQAsAAAAAgC5AAAAAwCy
 BAAABABiBAAAAQCyBAAAAQDNBgAAAQBWBgAAAQBWBgAAAQDzAgkA9gQBABEA9gQGABkA9gQKACkA
 9gQQADEA9gQQADkA9gQQAEEA9gQQAEkA9gQQAFEA9gQQAFkA9gQQAGEA9gQQAGkA9gQGAJkA9gQG
-ALkA9gQVAMkA9gQGAIkA3AIGAIkA5wIGAIkAWAAbANEAIwQgAHEA9gQlAHEAsgQvAHEA0gUzAHkA
+ALkA9gQVAMkA9gQGAIkA3AIGAIkA5wIGAIkANAAbANEAIwQgAHEA9gQlAHEAsgQvAHEA0gUzAHkA
 GgA3AHEAggM8AHEAkQNBAHEAiQMBANkA9gQQAHEAyQZHAHEAGgZHAIkA9gQGAOEAAAZLAIkA5gVS
 AJEA9gQGAPEApwBYAPEA0QZfAKEA9gRlAMEA9gQGAC4ACwDqAC4AEwDzAC4AGwASAS4AIwAbAS4A
 KwBEAS4AMwBEAS4AOwBEAS4AQwAbAS4ASwBKAS4AUwBEAS4AWwBhAUMAYwCrAakAcwASAckAcwAS
 AeEAewCrAeMAawCrAQMAAQAHAAUACAAHAAAAiwDPAAAAXAPTAAAAJgTXAAAAcQPTAAAAvQTbAAAA
 CQHgAAAAKgblAAIABgADAAIABwAFAAEACAAHAAEACQAJAAIAEwALAAIAFAANAAEAFQANAAIAFgAP
-AASAAAABAAAAAAAAAAAAAAAAACMAAAAEAAAAAAAAAAAAAABtAG4AAAAAAA4AAAAAAAAAAAAAAHYA
+AASAAAABAAAAAAAAAAAAAAAAAFMAAAAEAAAAAAAAAAAAAABtAEoAAAAAAA4AAAAAAAAAAAAAAHYA
 YAYAAAAADgAAAAAAAAAAAAAAdgB9BgAAAAAEAAAAAAAAAAAAAABtAJoDAAAAAA4AAAAAAAAAAAAA
 AHYAbAQAAAAAAAAAAAEAAABHBQAAAAAAAABJRFRTQ29tcG9uZW50TWV0YURhdGExMDAAR2V0SW50
-MzIAU0NfOGIyODU0ODZiMDVjNDJkMTk0ZjEyOTJiYjBlYmUzZDMAPE1vZHVsZT4ASW5wdXRJRABn
-ZXRfQ29tcG9uZW50TWV0YURhdGEAbXNjb3JsaWIAZGVmYXVsdEluc3RhbmNlAGdldF9FcnJvckNv
+MzIAPE1vZHVsZT4ASW5wdXRJRABnZXRfQ29tcG9uZW50TWV0YURhdGEAbXNjb3JsaWIAU0NfMTQ5
+MTIzNDNhNTBlNDVhYTgzZTUxY2FhZTVhM2JkMGUAZGVmYXVsdEluc3RhbmNlAGdldF9FcnJvckNv
 ZGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUASW5wdXROYW1lAE1pY3Jvc29m
 dC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVz
 b3VyY2VDdWx0dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAEVkaXRvckJyb3dzYWJsZVN0YXRl
@@ -1311,8 +1353,8 @@ dHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RB
 dHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAU1NJU1NjcmlwdENvbXBvbmVudEVu
 dHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRp
 YmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAUG9zdEV4ZWN1dGUAdmFsdWUAU3lzdGVtLlJ1bnRp
-bWUuVmVyc2lvbmluZwBTdHJpbmcAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFNDXzhiMjg1NDg2YjA1
-YzQyZDE5NGYxMjkyYmIwZWJlM2QzLmRsbABnZXRfRXJyb3JDb2RlX0lzTnVsbABzZXRfRXJyb3JE
+bWUuVmVyc2lvbmluZwBTdHJpbmcAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFNDXzE0OTEyMzQzYTUw
+ZTQ1YWE4M2U1MWNhYWU1YTNiZDBlLmRsbABnZXRfRXJyb3JDb2RlX0lzTnVsbABzZXRfRXJyb3JE
 ZXNjcmlwdGlvbl9Jc051bGwAU2V0TnVsbABzZXRfSXRlbQBTeXN0ZW0AcmVzb3VyY2VNYW4AU2Ny
 aXB0TWFpbgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0u
 UmVmbGVjdGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAHNldF9FcnJvckRlc2NyaXB0aW9u
@@ -1321,9 +1363,9 @@ YW1lTWFwAE91dHB1dE1hcABNaWNyb3NvZnQuU3FsU2VydmVyLkRUU1BpcGVsaW5lV3JhcABJbnB1
 dDBCdWZmZXIAUGlwZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFnZXIA
 TWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUuV3JhcHBlcgAuY3RvcgAuY2N0b3IAU3lz
 dGVtLkRpYWdub3N0aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJl
-c291cmNlcwBTQ184YjI4NTQ4NmIwNWM0MmQxOTRmMTI5MmJiMGViZTNkMy5Qcm9wZXJ0aWVzLlJl
-c291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU0NfOGIyODU0ODZiMDVjNDJkMTk0ZjEy
-OTJiYjBlYmUzZDMuUHJvcGVydGllcwBWYXJpYWJsZXMAQnVmZmVyQ29sdW1uSW5kZXhlcwBHZXRD
+c291cmNlcwBTQ18xNDkxMjM0M2E1MGU0NWFhODNlNTFjYWFlNWEzYmQwZS5Qcm9wZXJ0aWVzLlJl
+c291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU0NfMTQ5MTIzNDNhNTBlNDVhYTgzZTUx
+Y2FhZTVhM2JkMGUuUHJvcGVydGllcwBWYXJpYWJsZXMAQnVmZmVyQ29sdW1uSW5kZXhlcwBHZXRD
 b2x1bW5JbmRleGVzAFNldHRpbmdzAEVxdWFscwBDb25uZWN0aW9ucwBPYmplY3QARW5kT2ZSb3dz
 ZXQAZ2V0X0RlZmF1bHQAVXNlckNvbXBvbmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29tcG9u
 ZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQATWljcm9zb2Z0LlNxbFNlcnZlci5QaXBl
@@ -1331,15 +1373,15 @@ bGluZUhvc3QASW5wdXQwX1Byb2Nlc3NJbnB1dABJbnB1dDBfUHJvY2Vzc0lucHV0Um93AE5leHRS
 b3cAZ2V0X0Fzc2VtYmx5AAAAAICbSQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEA
 bgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAg
 AGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEA
-ZAAuAAAPSQBuAHAAdQB0ACAAMAAAcVMAQwBfADgAYgAyADgANQA0ADgANgBiADAANQBjADQAMgBk
-ADEAOQA0AGYAMQAyADkAMgBiAGIAMABlAGIAZQAzAGQAMwAuAFAAcgBvAHAAZQByAHQAaQBlAHMA
-LgBSAGUAcwBvAHUAcgBjAGUAcwAA7T4fNpKfpkOyYjsbjGoDIAAEIAEBCAMgAAEFIAEBEREEIAEB
+ZAAuAAAPSQBuAHAAdQB0ACAAMAAAcVMAQwBfADEANAA5ADEAMgAzADQAMwBhADUAMABlADQANQBh
+AGEAOAAzAGUANQAxAGMAYQBhAGUANQBhADMAYgBkADAAZQAuAFAAcgBvAHAAZQByAHQAaQBlAHMA
+LgBSAGUAcwBvAHUAcgBjAGUAcwAAnrkRBwP2qUSsYL/NnYXpZgAEIAEBCAMgAAEFIAEBEREEIAEB
 DgUgAQERWQQgABJpBCABDggJIAMBEj0dCBJBAwYSPQMGHQgEIAEICAQgAQIIBSACAQgcAyAAAgYg
 AgIOEXUFIAEdCAgGAAESeRF9BSAAEoCBByACAQ4SgIEIt3pcVhk04IkIiYRdzYCAzJEDBhIUAwYS
 GAMGEkUDBhJRAwYSVQMGEiAFIAEBEgwDIAAIBCABAQIJIAQBCA4SPRJBBSABARJFBAAAElEEAAAS
 VQUAAQESVQQAABIgAwAAAQMoAAgDKAACAygADgQIABJRBAgAElUECAASIAgBAAgAAAAAAB4BAAEA
-VAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU0NfOGIyODU0ODZiMDVjNDJk
-MTk0ZjEyOTJiYjBlYmUzZDMAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAxOAAASQEAGi5ORVRG
+VAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU0NfMTQ5MTIzNDNhNTBlNDVh
+YTgzZTUxY2FhZTVhM2JkMGUAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAxOAAASQEAGi5ORVRG
 cmFtZXdvcmssVmVyc2lvbj12NC41AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1l
 d29yayA0LjUEAQAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJl
 YWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNL
@@ -1360,17 +1402,17 @@ AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
 AAAAAAAAALAETAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAA
 MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
 AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
-AABTAEMAXwA4AGIAMgA4ADUANAA4ADYAYgAwADUAYwA0ADIAZAAxADkANABmADEAMgA5ADIAYgBi
-ADAAZQBiAGUAMwBkADMAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
-MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADgAYgAyADgANQA0
-ADgANgBiADAANQBjADQAMgBkADEAOQA0AGYAMQAyADkAMgBiAGIAMABlAGIAZQAzAGQAMwAuAGQA
+AABTAEMAXwAxADQAOQAxADIAMwA0ADMAYQA1ADAAZQA0ADUAYQBhADgAMwBlADUAMQBjAGEAYQBl
+ADUAYQAzAGIAZAAwAGUAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
+MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADEANAA5ADEAMgAz
+ADQAMwBhADUAMABlADQANQBhAGEAOAAzAGUANQAxAGMAYQBhAGUANQBhADMAYgBkADAAZQAuAGQA
 bABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBo
 AHQAIABAACAAIAAyADAAMQA4AAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMA
-AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8AOABi
-ADIAOAA1ADQAOAA2AGIAMAA1AGMANAAyAGQAMQA5ADQAZgAxADIAOQAyAGIAYgAwAGUAYgBlADMA
-ZAAzAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADgAYgAy
-ADgANQA0ADgANgBiADAANQBjADQAMgBkADEAOQA0AGYAMQAyADkAMgBiAGIAMABlAGIAZQAzAGQA
-MwAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4
+AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8AMQA0
+ADkAMQAyADMANAAzAGEANQAwAGUANAA1AGEAYQA4ADMAZQA1ADEAYwBhAGEAZQA1AGEAMwBiAGQA
+MABlAC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADEANAA5
+ADEAMgAzADQAMwBhADUAMABlADQANQBhAGEAOAAzAGUANQAxAGMAYQBhAGUANQBhADMAYgBkADAA
+ZQAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4
 AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -1395,7 +1437,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                       dataType="System.String"
                       description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
                       name="VSTAProjectName"
-                      typeConverter="NOTBROWSABLE">SC_8b285486b05c42d194f1292bb0ebe3d3</property>
+                      typeConverter="NOTBROWSABLE">SC_14912343a50e45aa83e51caae5a3bd0e</property>
                     <property
                       dataType="System.String"
                       description="Specifies the programming language used by the script."
@@ -1439,7 +1481,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
                           refId="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description.Inputs[Input 0].Columns[ErrorCode]"
                           cachedDataType="i4"
                           cachedName="ErrorCode"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output].Columns[ErrorCode]" />
+                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Error Output].Columns[ErrorCode]" />
                       </inputColumns>
                       <externalMetadataColumns />
                     </input>
@@ -1539,8 +1581,8 @@ where [refTable].[CurrencyAlternateKey] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[LAPTOP-RSO49BQP.AdventureWorksDW2012]"
-                      connectionManagerRefId="Package.ConnectionManagers[LAPTOP-RSO49BQP.AdventureWorksDW2012]"
+                      connectionManagerID="Package.ConnectionManagers[LAPTOP-RSO49BQP/SQLEXPRESS.AdventureWorksDW2012]"
+                      connectionManagerRefId="Package.ConnectionManagers[LAPTOP-RSO49BQP/SQLEXPRESS.AdventureWorksDW2012]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -1552,7 +1594,7 @@ where [refTable].[CurrencyAlternateKey] = ?</property>
                         <inputColumn
                           refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Inputs[Lookup Input].Columns[CurrencyID]"
                           cachedDataType="wstr"
-                          cachedLength="50"
+                          cachedLength="3"
                           cachedName="CurrencyID"
                           lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Flat File Source Output].Columns[CurrencyID]">
                           <properties>
@@ -1574,7 +1616,7 @@ where [refTable].[CurrencyAlternateKey] = ?</property>
                     <output
                       refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Match Output]"
                       errorOrTruncationOperation="Lookup"
-                      errorRowDisposition="RedirectRow"
+                      errorRowDisposition="FailComponent"
                       exclusionGroup="1"
                       name="Lookup Match Output"
                       synchronousInputId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Inputs[Lookup Input]">
@@ -1633,6 +1675,7 @@ where [refTable].[CurrencyAlternateKey] = ?</property>
                   componentClassID="Microsoft.Lookup"
                   contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
                   description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+                  localeId="1033"
                   name="Lookup Date Key"
                   usesDispositions="true"
                   version="6">
@@ -1698,8 +1741,8 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[LAPTOP-RSO49BQP.AdventureWorksDW2012]"
-                      connectionManagerRefId="Package.ConnectionManagers[LAPTOP-RSO49BQP.AdventureWorksDW2012]"
+                      connectionManagerID="Package.ConnectionManagers[LAPTOP-RSO49BQP/SQLEXPRESS.AdventureWorksDW2012]"
+                      connectionManagerRefId="Package.ConnectionManagers[LAPTOP-RSO49BQP/SQLEXPRESS.AdventureWorksDW2012]"
                       description="Connection manager used to access lookup data."
                       name="OleDbConnection" />
                   </connections>
@@ -1732,7 +1775,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                     <output
                       refId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Match Output]"
                       errorOrTruncationOperation="Lookup"
-                      errorRowDisposition="FailComponent"
+                      errorRowDisposition="RedirectRow"
                       exclusionGroup="1"
                       name="Lookup Match Output"
                       synchronousInputId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Inputs[Lookup Input]">
@@ -1802,7 +1845,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                     <property
                       dataType="System.String"
                       description="Specifies the name of the database object used to open a rowset."
-                      name="OpenRowset">[NewFactCurrencyRate2]</property>
+                      name="OpenRowset">[dbo].[FactCurrencyRate]</property>
                     <property
                       dataType="System.String"
                       description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -1836,7 +1879,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                     <property
                       dataType="System.String"
                       description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                      name="FastLoadOptions"></property>
                     <property
                       dataType="System.Int32"
                       description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
@@ -1845,8 +1888,8 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                   <connections>
                     <connection
                       refId="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination.Connections[OleDbConnection]"
-                      connectionManagerID="Package.ConnectionManagers[LAPTOP-RSO49BQP.AdventureWorksDW2012]"
-                      connectionManagerRefId="Package.ConnectionManagers[LAPTOP-RSO49BQP.AdventureWorksDW2012]"
+                      connectionManagerID="Package.ConnectionManagers[LAPTOP-RSO49BQP/SQLEXPRESS.AdventureWorksDW2012]"
+                      connectionManagerRefId="Package.ConnectionManagers[LAPTOP-RSO49BQP/SQLEXPRESS.AdventureWorksDW2012]"
                       description="The OLE DB runtime connection used to access the database."
                       name="OleDbConnection" />
                   </connections>
@@ -1854,7 +1897,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                     <input
                       refId="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input]"
                       errorOrTruncationOperation="Insert"
-                      errorRowDisposition="IgnoreFailure"
+                      errorRowDisposition="FailComponent"
                       hasSideEffects="true"
                       name="OLE DB Destination Input">
                       <inputColumns>
@@ -1864,19 +1907,6 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                           cachedName="AverageRate"
                           externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageRate]"
                           lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Flat File Source Output].Columns[AverageRate]" />
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrencyID]"
-                          cachedDataType="wstr"
-                          cachedLength="50"
-                          cachedName="CurrencyID"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyID]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Flat File Source Output].Columns[CurrencyID]" />
-                        <inputColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].Columns[CurrencyDate]"
-                          cachedDataType="dbDate"
-                          cachedName="CurrencyDate"
-                          externalMetadataColumnId="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyDate]"
-                          lineageId="Package\Foreach File in Folder\Extract Sample Currency Data\Extract Sample Currency Data.Outputs[Flat File Source Output].Columns[CurrencyDate]" />
                         <inputColumn
                           refId="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EndOfDayRate]"
                           cachedDataType="r4"
@@ -1900,20 +1930,11 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                         isUsed="True">
                         <externalMetadataColumn
                           refId="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[AverageRate]"
-                          dataType="r4"
+                          dataType="r8"
                           name="AverageRate" />
                         <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyID]"
-                          dataType="wstr"
-                          length="50"
-                          name="CurrencyID" />
-                        <externalMetadataColumn
-                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyDate]"
-                          dataType="dbDate"
-                          name="CurrencyDate" />
-                        <externalMetadataColumn
                           refId="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EndOfDayRate]"
-                          dataType="r4"
+                          dataType="r8"
                           name="EndOfDayRate" />
                         <externalMetadataColumn
                           refId="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CurrencyKey]"
@@ -1923,6 +1944,10 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                           refId="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
                           dataType="i4"
                           name="DateKey" />
+                        <externalMetadataColumn
+                          refId="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                          dataType="dbTimeStamp"
+                          name="Date" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -1962,7 +1987,7 @@ where [refTable].[FullDateAlternateKey] = ?</property>
                   refId="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Lookup Error Output]"
                   endId="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description.Inputs[Input 0]"
                   name="Lookup Error Output"
-                  startId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key.Outputs[Lookup Error Output]" />
+                  startId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Outputs[Lookup Error Output]" />
                 <path
                   refId="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Lookup Match Output]"
                   endId="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key.Inputs[Lookup Input]"
@@ -1986,8 +2011,8 @@ where [refTable].[FullDateAlternateKey] = ?</property>
       <DTS:ForEachVariableMappings>
         <DTS:ForEachVariableMapping
           DTS:CreationName=""
-          DTS:DTSID="{1A6BAF08-7E5C-4A53-87C8-68EF1E961DFA}"
-          DTS:ObjectName="{1A6BAF08-7E5C-4A53-87C8-68EF1E961DFA}"
+          DTS:DTSID="{52ADC224-D656-4F8F-86B6-3952B12DBCE3}"
+          DTS:ObjectName="{52ADC224-D656-4F8F-86B6-3952B12DBCE3}"
           DTS:ValueIndex="0"
           DTS:VariableName="User::varFileName" />
       </DTS:ForEachVariableMappings>
@@ -2008,14 +2033,14 @@ where [refTable].[FullDateAlternateKey] = ?</property>
         <NodeLayout
           Size="219.2,41.6"
           Id="Package\Foreach File in Folder\Extract Sample Currency Data"
-          TopLeft="5.5,5.5" />
+          TopLeft="10.0571448131488,4.23529501852285" />
         <ContainerLayout
           HeaderHeight="43"
           IsExpanded="True"
-          PanelSize="229.6,102.4"
-          Size="229.6,145.6"
+          PanelSize="309.6,101.6"
+          Size="309.6,144.8"
           Id="Package\Foreach File in Folder"
-          TopLeft="131.428573666787,25.082353292947" />
+          TopLeft="156.914288059546,16.5176472904773" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -2023,57 +2048,57 @@ where [refTable].[FullDateAlternateKey] = ?</property>
     design-time-name="Package\Foreach File in Folder\Extract Sample Currency Data">
     <LayoutInfo>
       <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="176.8,41.6"
           Id="Package\Foreach File in Folder\Extract Sample Currency Data\Get Error Description"
-          TopLeft="5.14285723043949,228.847060899834" />
-        <NodeLayout
-          Size="134.4,41.6"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows"
-          TopLeft="4.22857148695967,340.658826343576" />
-        <NodeLayout
-          Size="178.4,41.6"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key"
-          TopLeft="183.428574552342,227.576473779909" />
+          TopLeft="324.000005517687,270.400002917121" />
         <NodeLayout
           Size="219.2,41.6"
           Id="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination"
-          TopLeft="183.428574552342,391.529417109902" />
+          TopLeft="75.4285727131123,273.035297498076" />
         <NodeLayout
           Size="219.2,41.6"
-          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Extract Sample Currency Data"
-          TopLeft="183.428574552342,154.776472758917" />
+          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key"
+          TopLeft="75.4285727131123,100.94117788625" />
+        <NodeLayout
+          Size="134.4,41.6"
+          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Failed Rows"
+          TopLeft="328.68571602763,345.552943913417" />
         <NodeLayout
           Size="219.2,41.6"
           Id="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Date Key"
-          TopLeft="183.428574552342,317.505886805841" />
+          TopLeft="75.4285727131123,187.200002625409" />
+        <NodeLayout
+          Size="219.2,41.6"
+          Id="Package\Foreach File in Folder\Extract Sample Currency Data\Extract Sample Currency Data"
+          TopLeft="75.4285727131123,29.976471008644" />
         <EdgeLayout
           Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Output 0]"
-          TopLeft="93.5428572304395,270.447060899834">
+          TopLeft="412.400005517687,312.000002917121">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="-22.1142857434798,70.2117654437425"
+              StartConnector="{assembly:Null}"
+              EndConnector="-16.5142894900576,33.5529409962954"
               Start="0,0"
-              End="-22.1142857434798,62.7117654437425">
+              End="-16.5142894900576,26.0529409962954">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.1058827218712" />
+                    End="0,12.7764704981477" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.1058827218712"
-                    Point2="0,35.1058827218712"
-                    Point3="-4,35.1058827218712" />
+                    Point1="0,12.7764704981477"
+                    Point2="0,16.7764704981477"
+                    Point3="-4,16.7764704981477" />
                   <mssgle:LineSegment
-                    End="-18.1142857434798,35.1058827218712" />
+                    End="-12.5142894900576,16.7764704981477" />
                   <mssgle:CubicBezierSegment
-                    Point1="-18.1142857434798,35.1058827218712"
-                    Point2="-22.1142857434798,35.1058827218712"
-                    Point3="-22.1142857434798,39.1058827218712" />
+                    Point1="-12.5142894900576,16.7764704981477"
+                    Point2="-16.5142894900576,16.7764704981477"
+                    Point3="-16.5142894900576,20.7764704981477" />
                   <mssgle:LineSegment
-                    End="-22.1142857434798,62.7117654437425" />
+                    End="-16.5142894900576,26.0529409962954" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2084,126 +2109,114 @@ where [refTable].[FullDateAlternateKey] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Lookup Match Output1]"
-          TopLeft="293.028574552342,359.105886805841">
+          TopLeft="149.828572713112,228.800002625409">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="0,32.4235303040606"
+              StartConnector="{assembly:Null}"
+              EndConnector="35.2,44.235294872667"
               Start="0,0"
-              End="0,24.9235303040606">
+              End="35.2,36.735294872667">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,24.9235303040606" />
+                    End="0,13.8864453180784" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.8864453180784"
+                    Point2="0,17.8864453180784"
+                    Point3="4,17.8864453180784" />
+                  <mssgle:LineSegment
+                    End="31.2,17.8864453180784" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.2,17.8864453180784"
+                    Point2="35.2,17.8864453180784"
+                    Point3="35.2,21.8864453180784" />
+                  <mssgle:LineSegment
+                    End="35.2,36.735294872667" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,6.6570776520303,96.3827734375,11.609375"
+              BoundingBox="-30.59138671875,22.8864453180784,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Lookup Match Output]"
-          TopLeft="272.628574552342,269.176473779909">
+          TopLeft="185.028572713112,142.54117788625">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="20.4,48.329413025932"
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.658824739159"
               Start="0,0"
-              End="20.4,40.829413025932">
+              End="0,37.158824739159">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.164706512966" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,20.164706512966"
-                    Point2="0,24.164706512966"
-                    Point3="4,24.164706512966" />
-                  <mssgle:LineSegment
-                    End="16.4,24.164706512966" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.4,24.164706512966"
-                    Point2="20.4,24.164706512966"
-                    Point3="20.4,28.164706512966" />
-                  <mssgle:LineSegment
-                    End="20.4,40.829413025932" />
+                    End="0,37.158824739159" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-37.99138671875,29.164706512966,96.3827734375,11.609375"
+              BoundingBox="-48.19138671875,12.7747248695795,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Lookup Error Output]"
-          TopLeft="244.228574552342,227.576473779909">
+          TopLeft="220.228572713112,228.800002625409">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="-150.685717321903,1.27058711992453"
+              StartConnector="{assembly:Null}"
+              EndConnector="192.171432804575,41.6000002917125"
               Start="0,0"
-              End="-150.685717321903,-6.22941288007547">
+              End="192.171432804575,34.1000002917125">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,-18.5" />
+                    End="0,12.8208696831707" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,-18.5"
-                    Point2="0,-22.5"
-                    Point3="-4,-22.5" />
+                    Point1="0,12.8208696831707"
+                    Point2="0,16.8208696831707"
+                    Point3="4,16.8208696831707" />
                   <mssgle:LineSegment
-                    End="-146.685717321903,-22.5" />
+                    End="188.171432804575,16.8208696831707" />
                   <mssgle:CubicBezierSegment
-                    Point1="-146.685717321903,-22.5"
-                    Point2="-150.685717321903,-22.5"
-                    Point3="-150.685717321903,-18.5" />
+                    Point1="188.171432804575,16.8208696831707"
+                    Point2="192.171432804575,16.8208696831707"
+                    Point3="192.171432804575,20.8208696831707" />
                   <mssgle:LineSegment
-                    End="-150.685717321903,-6.22941288007547" />
+                    End="192.171432804575,34.1000002917125" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-121.209245379702,-17.5,91.7327734375,11.609375"
+              BoundingBox="50.2193296835375,21.8208696831707,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Foreach File in Folder\Extract Sample Currency Data.Paths[Flat File Source Output]"
-          TopLeft="293.028574552342,196.376472758917">
+          TopLeft="185.028572713112,71.576471008644">
           <EdgeLayout.Curve>
             <mssgle:Curve
-              StartConnector="{x:Null}"
-              EndConnector="-20.4,31.200001020992"
+              StartConnector="{assembly:Null}"
+              EndConnector="0,29.3647068776061"
               Start="0,0"
-              End="-20.4,23.700001020992">
+              End="0,21.8647068776061">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,11.600000510496" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,11.600000510496"
-                    Point2="0,15.600000510496"
-                    Point3="-4,15.600000510496" />
-                  <mssgle:LineSegment
-                    End="-16.4,15.600000510496" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-16.4,15.600000510496"
-                    Point2="-20.4,15.600000510496"
-                    Point3="-20.4,19.600000510496" />
-                  <mssgle:LineSegment
-                    End="-20.4,23.700001020992" />
+                    End="0,21.8647068776061" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -2212,24 +2225,22 @@ where [refTable].[FullDateAlternateKey] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <AnnotationLayout
-          Text="The data flow extracts data from a file, looks up values in the CurrencyKey column in the DimCurrency table and the Datekey column in the Dimdate table, and writes the data to the NewFactCurrencyRate2 table. &#xA;"
-          ParentId="Package\Foreach File in Folder\Extract Sample Currency Data"
-          Size="200,130.4"
-          Id="e1cff6ab-e830-4d3c-8663-69a06f6a4b7f"
-          TopLeft="413.142864178638,257.129414192781">
-          <AnnotationLayout.FontInfo>
-            <mssge:FontInfo
-              Color="#FFF1F1F1">
-              <mssge:FontInfo.TextDecorations>
-                <av:TextDecorationCollection />
-              </mssge:FontInfo.TextDecorations>
-            </mssge:FontInfo>
-          </AnnotationLayout.FontInfo>
-        </AnnotationLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Foreach File in Folder\Extract Sample Currency Data\Lookup Currency Key">
     <Properties>
@@ -2250,19 +2261,6 @@ where [refTable].[FullDateAlternateKey] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Foreach File in Folder\Extract Sample Currency Data\Sample OLE DB Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
